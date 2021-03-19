@@ -11,20 +11,21 @@
 
 	<h1>Změna tříd, události</h1>
 
-	<p class="odstavec" onmouseover="boldText()" onmouseout="normalText()">V elipse spí lev</p>
+	<p id="zvetsit" class="odstavec" onmouseover="boldText()" onmouseout="normalText()">V elipse spí lev</p>
 
 	<button onclick="colorChange()">Červený po kliknutí</button>
-	<button onclick="biggerFont()">Větší po kliknutí</button>
+	<button onclick="increaseFontSize('zvetsit', 1)">Větší po kliknutí</button>
+	<br>
 
-	<div class="ctverecek zluty"></div>
 
-	<div class="ctverecek zeleny"></div>
+	<audio id="zvuk" src="audio/dingdingdang.mp3" preload="auto"></audio>
 
-	<img class="obrazek" src="obrazky/kocka.jpg">
-
-	<button class="tlacitko">Čudlajs</button>
-
-	<audio src="audio/dingdingdang.mp3" preload="auto"></audio>
+	<button onclick="prehrat('#zvuk')">Přehrát audio</button>
+	<button onclick="zacatek('#zvuk')">Vrátit se na začátek</button>
+	<button onclick="zastavit('#zvuk')">Zastavit audio</button>
+	<button onclick="ztisit('#zvuk')">Ztišit audio</button>
+	<button onclick="polovicniHlasitost('#zvuk')">Tak akorát hlasitost</button>
+	<button onclick="vysokaHlasitost('#zvuk')">Vysoká hlasitost</button>
 
 	<script src="main.js"></script>
 </body>

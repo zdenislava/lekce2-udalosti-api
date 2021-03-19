@@ -1,26 +1,67 @@
 // tady je místo pro náš program
 
-/*let nadpis = document.querySelector("h1");
-nadpis.classList.toggle("zeleny");*/
-
-let paragraf = document.querySelector(".odstavec");
+let odstavec = document.querySelector(".odstavec");
 
 //onmouseover a onmouseout použít
 
 function boldText() {
-    paragraf.style.fontWeight="bold";
+    odstavec.style.fontWeight="bold";
 }
 
 function normalText(){
-    paragraf.style.fontWeight="normal";
+    odstavec.style.fontWeight="normal";
 }
 
 function colorChange(){
-    paragraf.classList.toggle("cervena");
+    odstavec.classList.toggle("cervena");
 }
 
-//zvětší seo 1 pixel vždy, ne jen na 17px
+//zvětší se o 1 pixel vždy, nemám nejmenší tušení, jak se to dělá, enjoy my copy pasted solution
+
+function increaseFontSize(id, increaseFactor){
+    txt = document.getElementById(id);
+    style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+    currentSize = parseFloat(style);
+    txt.style.fontSize = (currentSize + increaseFactor) + 'px';
+}
 
 function biggerFont(){
-    paragraf.style.fontSize="17px";
+   
+}
+
+//audio
+
+function prehrat(elementSelector) {
+    let audioElement = document.querySelector(elementSelector);
+    audioElement.play();
+}
+
+function zacatek(elementSelector) {
+    let audioElement = document.querySelector(elementSelector);
+    audioElement.load();
+}
+
+function zastavit(elementSelector) {
+    let audioElement = document.querySelector(elementSelector);
+    audioElement.pause();
+}
+
+function zastavit(elementSelector) {
+    let audioElement = document.querySelector(elementSelector);
+    audioElement.pause();
+}
+
+function ztisit(elementSelector) {
+    let audioElement = document.querySelector(elementSelector);
+    audioElement.volume = 0;
+}
+
+function polovicniHlasitost(elementSelector) {
+    let audioElement = document.querySelector(elementSelector);
+    audioElement.volume = 0.5;
+}
+
+function vysokaHlasitost(elementSelector) {
+    let audioElement = document.querySelector(elementSelector);
+    audioElement.volume = 1;
 }
